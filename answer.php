@@ -30,17 +30,17 @@
         <div class="page-content-php">
           <div id="user-info">
             <?php
-            $baseOfTriangle = $_POST["base-of-triangle"];
-            $heightOfTriangle = $_POST["height-of-triangle"];
+            $hoursWorked = $_POST["hours-worked"];
+            $hourlyWage = $_POST["hourl-wage"];
 
             // process
             $area = $baseOfTriangle * $heightOfTriangle * 0.5;
 
             // output
-            echo "If a Triangle has base = " . $baseOfTriangle . " cm and the height = " . $heightOfTriangle . " cm:";
+            echo "Your pay will be: " . $baseOfTriangle . " cm and the height = " . $heightOfTriangle . " cm:";
             echo "<br />";
             echo "<br />";
-            echo "The area of the triangle is " . $area . " cm².";
+            echo "The government will take: $" . $area . " cm².";
             echo "<br />";
 
             ?>
