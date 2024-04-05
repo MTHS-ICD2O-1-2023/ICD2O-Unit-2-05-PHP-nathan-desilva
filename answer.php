@@ -28,19 +28,20 @@
           <img src="./images/income_tax.jpg" alt="income-tax" width="250" />
         </div>
         <div class="page-content-php">
-          <div id="user-info">
+          <div name="salary">
             <?php
-            $hoursWorked = $_POST["hours-worked"];
-            $hourlyWage = $_POST["hourl-wage"];
+            $hoursWorked = $_GET["hours-worked"];
+            $hourlyWage = $_GET["hourly-wage"];
+            $TAX_RATE = 0.18
 
             // process
-            $area = $baseOfTriangle * $heightOfTriangle * 0.5;
+            $salary = $hoursWorked * $hourlyWage;
 
             // output
-            echo "Your pay will be: " . $baseOfTriangle . " cm and the height = " . $heightOfTriangle . " cm:";
+            echo "Your pay will be: " . $salary.toFixed(2);
             echo "<br />";
             echo "<br />";
-            echo "The government will take: $" . $area . " cm².";
+            echo "The government will take: $" . 
             echo "<br />";
 
             ?>
