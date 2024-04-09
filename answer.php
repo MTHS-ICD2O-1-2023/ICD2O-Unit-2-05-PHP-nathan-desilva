@@ -32,16 +32,17 @@
             <?php
             $hoursWorked = $_GET["hours-worked"];
             $hourlyWage = $_GET["hourly-wage"];
-            $TAX_RATE = 0.18
+            $TAX_RATE = 0.18;
 
             // process
             $salary = $hoursWorked * $hourlyWage;
+            $government = $salary * $TAX_RATE;
 
             // output
-            echo "Your pay will be: " . $salary.toFixed(2);
+            echo "Your pay will be: $" . $salary.parseInt(2);
             echo "<br />";
             echo "<br />";
-            echo "The government will take: $" . 
+            echo "The government will take: $" . $government.parseInt(2);
             echo "<br />";
 
             ?>
