@@ -30,19 +30,19 @@
         <div class="page-content-php">
           <div name="salary">
             <?php
-            $hoursWorked = $_GET["hours-worked"];
-            $hourlyWage = $_GET["hourly-wage"];
+            $hoursWorked = $_POST["hours-worked"];
+            $hourlyWage = $_POST["hourly-wage"];
             $TAX_RATE = 0.18;
 
             // process
-            $salary = $hoursWorked * $hourlyWage;
-            $government = $salary * $TAX_RATE;
+            $salary = ($hoursWorked * $hourlyWage * (1.00 - $TAX_RATE));
+            $government = (($hoursWorked * $hourlyWage) * $TAX_RATE);
 
             // output
-            echo "Your pay will be: $" . $salary.parseInt(2);
+            echo "Your pay will be: $" . round($salary, 2);
             echo "<br />";
             echo "<br />";
-            echo "The government will take: $" . $government.parseInt(2);
+            echo "The government will take: $" . round($government, 2);
             echo "<br />";
 
             ?>
