@@ -39,6 +39,9 @@
             $government = (($hoursWorked * $hourlyWage) * $TAX_RATE);
 
             // output
+            echo "If you worked: " . $hoursWorked . " hours and you get paid $" . $hourlyWage . " every hour.";
+            echo "<br />";
+            echo "<br />";
             echo "Your pay will be: $" . round($salary, 2);
             echo "<br />";
             echo "<br />";
